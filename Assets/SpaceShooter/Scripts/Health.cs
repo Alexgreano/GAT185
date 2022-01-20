@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Health : MonoBehaviour
+{
+    [SerializeField] GameObject deathPrefab;
+    [SerializeField] bool destroyOnDeath = true;
+    [SerializeField] float maxHealth = 100;
+
+    [HideInInspector] public float health;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        health = maxHealth;
+    }
+
+    // Update is called once per frame
+    public void Damage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            if (deathPrefab != null)
+            {
+                Instantiate(deathPrefab, transform.position, transform.rotation);
+            }
+            if (destroyOnDeath)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+}
