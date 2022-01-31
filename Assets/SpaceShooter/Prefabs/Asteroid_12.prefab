@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8246578205207227649}
+  - component: {fileID: -1501854490808126886}
   - component: {fileID: 510367093519934879}
   - component: {fileID: -3968611990342522529}
   - component: {fileID: -7874118008406308752}
   - component: {fileID: 8220923935957006177}
   - component: {fileID: 8228495116733784531}
   - component: {fileID: 8252204920148796811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asteroid_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,11 +32,27 @@ Transform:
   m_GameObject: {fileID: 8243258902992710693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1501854490808126886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243258902992710693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b520598b81cb31428600c0aedf90d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceWeapon: {fileID: 0}
+  minFireTime: 0
+  maxFireTime: 0
+  points: 50
 --- !u!114 &510367093519934879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4668d5ca3077477419e0924f1142930e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathPrefab: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
+  deathPrefab: {fileID: 100004, guid: 33384af7b24a0f14cb7bbf3b795f7a2b, type: 3}
   destroyOnDeath: 1
   maxHealth: 5
   health: 0
